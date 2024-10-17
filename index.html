@@ -3,40 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Regalo para Marta</title>
+    <title>Gift for Marta</title>
     <style>
         body {
-            background-color: #e0f7fa; /* Fondo azul claro */
+            background-color: #e0f7fa; /* Light blue background */
             font-family: 'Arial', sans-serif;
-            color: #003366; /* Azul oscuro para el texto */
+            color: #003366; /* Dark blue for text */
             text-align: center;
             padding: 20px;
-            overflow: hidden; /* Para evitar scroll al mostrar los corazones */
+            overflow: hidden; /* Prevent scroll when showing hearts */
         }
         h1 {
-            color: #0077b6; /* Azul más vivo */
+            color: #0077b6; /* Brighter blue */
             font-size: 36px;
-            margin-bottom: 20px; /* Menos margen para ajustar el espacio */
+            margin-bottom: 20px; /* Less margin to adjust space */
         }
         #regalo {
             position: relative;
             display: inline-block;
             padding: 20px;
             border-radius: 10px;
-            background-color: #ffffff; /* Fondo blanco del regalo */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombras elegantes */
+            background-color: #ffffff; /* White background for the gift */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Elegant shadows */
             width: 100%;
-            max-width: 400px; /* Ajustar para pantallas móviles */
-            margin: 0 auto; /* Centrado */
-            margin-bottom: 70px; /* Espacio extra para los corazones */
-            z-index: 1; /* Asegurarnos que el panel esté por encima de los corazones */
+            max-width: 400px; /* Adjust for mobile screens */
+            margin: 0 auto; /* Centered */
+            margin-bottom: 70px; /* Extra space for hearts */
+            z-index: 1; /* Ensure panel is above hearts */
         }
         #flores {
-            width: 80%; /* Ajustamos el tamaño para que sea más grande */
+            width: 80%; /* Adjust size to be larger */
             max-width: 300px;
-            margin: 20px auto; /* Centramos la imagen */
-            display: none; /* Ocultamos la imagen al principio */
-            transition: opacity 1s ease-in-out; /* Suave aparición */
+            margin: 20px auto; /* Center image */
+            display: none; /* Hide image initially */
+            transition: opacity 1s ease-in-out; /* Smooth appearance */
         }
         #mensaje {
             display: none;
@@ -44,50 +44,50 @@
             margin-top: 20px;
             opacity: 0;
             transition: opacity 1s ease-in-out;
-            color: #005f73; /* Azul más suave */
-            text-align: left; /* Alineamos el texto a la izquierda para mayor elegancia */
+            color: #005f73; /* Softer blue */
+            text-align: left; /* Align text to the left for elegance */
         }
         #papelito {
-            font-size: 22px; /* Aumentamos el tamaño de la fuente para mejor legibilidad */
+            font-size: 22px; /* Increase font size for better readability */
             padding: 15px 30px;
             border: 2px solid #0077b6;
-            background-color: #caf0f8; /* Azul muy claro */
+            background-color: #caf0f8; /* Very light blue */
             cursor: pointer;
             border-radius: 5px;
             margin-top: 20px;
             display: inline-block;
             transition: background-color 0.3s;
-            text-align: center; /* Centrar el texto del botón */
-            font-weight: bold; /* Hacer el texto más prominente */
+            text-align: center; /* Center button text */
+            font-weight: bold; /* Make text more prominent */
         }
         #papelito:hover {
-            background-color: #90e0ef; /* Un tono más vivo al pasar el ratón */
+            background-color: #90e0ef; /* A brighter tone on hover */
         }
         .corazones {
             position: absolute;
             left: 0;
             right: 0;
-            bottom: 0; /* Colocamos los corazones en la parte inferior */
-            pointer-events: none; /* Evitar que los corazones interfieran con clics */
+            bottom: 0; /* Place hearts at the bottom */
+            pointer-events: none; /* Prevent hearts from interfering with clicks */
         }
         .corazon {
-            width: 60px; /* Ajustamos el tamaño de los corazones */
+            width: 60px; /* Adjust heart size */
             position: absolute;
-            animation: flotar 6s infinite ease-in-out; /* Animación de subida */
-            opacity: 0.8; /* Hacemos los corazones un poco transparentes */
+            animation: float 6s infinite ease-in-out; /* Floating animation */
+            opacity: 0.8; /* Make hearts slightly transparent */
         }
-        @keyframes flotar {
+        @keyframes float {
             0% {
-                transform: translateY(100vh) translateX(0); /* Empieza desde la parte inferior */
+                transform: translateY(100vh) translateX(0); /* Start from the bottom */
             }
             50% {
-                transform: translateY(-50vh) translateX(-10px); /* Subida y pequeño movimiento a la izquierda */
+                transform: translateY(-50vh) translateX(-10px); /* Rise and slight left movement */
             }
             100% {
-                transform: translateY(-1px) translateX(10px); /* Sube y desaparece en la parte superior */
+                transform: translateY(-1px) translateX(10px); /* Rise and disappear at the top */
             }
         }
-        /* Corazones de fondo que se repiten */
+        /* Background hearts that repeat */
         .corazon1 { left: 10%; animation-delay: 0s; }
         .corazon2 { left: 25%; animation-delay: 1s; }
         .corazon3 { left: 40%; animation-delay: 2s; }
@@ -96,20 +96,20 @@
     </style>
 </head>
 <body>
-    <h1>Para la chica más guapa del mundo</h1>
+    <h1>For the prettiest girl in the world</h1>
     <div id="regalo">
-        <div id="papelito">Haz clic aquí</div>
-        <img src="./img/flowers.png" alt="Flores" id="flores">
+        <div id="papelito">Click here</div>
+        <img src="./img/flowers.png" alt="Flowers" id="flores">
         <p id="mensaje">Hola mi amor, te regalo estas flores que seguro que no se mueren.
             
             Eres lo mejor que me ha pasado, hare lo que sea para que esa sonrisa tan bonita que tienes nunca se te borre.<br>Att: El comepipas</p>
     </div>
     <div class="corazones">
-        <img src="./img/heart.png" alt="Corazón" class="corazon corazon1">
-        <img src="./img/heart.png" alt="Corazón" class="corazon corazon2">
-        <img src="./img/heart.png" alt="Corazón" class="corazon corazon3">
-        <img src="./img/heart.png" alt="Corazón" class="corazon corazon4">
-        <img src="./img/heart.png" alt="Corazón" class="corazon corazon5">
+        <img src="./img/heart.png" alt="Heart" class="corazon corazon1">
+        <img src="./img/heart.png" alt="Heart" class="corazon corazon2">
+        <img src="./img/heart.png" alt="Heart" class="corazon corazon3">
+        <img src="./img/heart.png" alt="Heart" class="corazon corazon4">
+        <img src="./img/heart.png" alt="Heart" class="corazon corazon5">
     </div>
 
     <script>
@@ -117,18 +117,18 @@
             const flores = document.getElementById("flores");
             const mensaje = document.getElementById("mensaje");
 
-            // Hacemos visibles las flores
+            // Make the flowers visible
             flores.style.display = "block";
             setTimeout(() => {
-                flores.style.opacity = "1"; // Aplicamos la transición para que se vea la imagen de forma suave
-                flores.style.transform = "scale(1)"; // La hacemos aparecer gradualmente
+                flores.style.opacity = "1"; // Apply transition for smooth image display
+                flores.style.transform = "scale(1)"; // Gradually make it appear
             }, 100);
 
-            // Mostramos el mensaje
+            // Show the message
             mensaje.style.display = "block";
             setTimeout(() => {
                 mensaje.style.opacity = "1";
-            }, 100); // Delay para que la animación de aparición sea suave
+            }, 100); // Delay for smooth appearance animation
         });
     </script>
 </body>
