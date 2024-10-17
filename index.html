@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gift for Marta</title>
+    <title>Regalo para Marta</title>
     <style>
         body {
             background-color: #e0f7fa; /* Light blue background */
@@ -73,10 +73,10 @@
         .corazon {
             width: 60px; /* Adjust heart size */
             position: absolute;
-            animation: float 6s infinite ease-in-out; /* Floating animation */
+            animation: flotar 6s infinite ease-in-out; /* Floating animation */
             opacity: 0.8; /* Make hearts slightly transparent */
         }
-        @keyframes float {
+        @keyframes flotar {
             0% {
                 transform: translateY(100vh) translateX(0); /* Start from the bottom */
             }
@@ -96,20 +96,20 @@
     </style>
 </head>
 <body>
-    <h1>For the prettiest girl in the world</h1>
+    <h1>Para la chica más guapa del mundo</h1>
     <div id="regalo">
-        <div id="papelito">Click here</div>
-        <img src="./img/flowers.png" alt="Flowers" id="flores">
+        <div id="papelito">Haz clic aquí</div>
+        <img src="./img/flowers.png" alt="Flores" id="flores">
         <p id="mensaje">Hola mi amor, te regalo estas flores que seguro que no se mueren.
             
             Eres lo mejor que me ha pasado, hare lo que sea para que esa sonrisa tan bonita que tienes nunca se te borre.<br>Att: El comepipas</p>
     </div>
     <div class="corazones">
-        <img src="./img/heart.png" alt="Heart" class="corazon corazon1">
-        <img src="./img/heart.png" alt="Heart" class="corazon corazon2">
-        <img src="./img/heart.png" alt="Heart" class="corazon corazon3">
-        <img src="./img/heart.png" alt="Heart" class="corazon corazon4">
-        <img src="./img/heart.png" alt="Heart" class="corazon corazon5">
+        <img src="./img/heart.png" alt="Corazón" class="corazon corazon1">
+        <img src="./img/heart.png" alt="Corazón" class="corazon corazon2">
+        <img src="./img/heart.png" alt="Corazón" class="corazon corazon3">
+        <img src="./img/heart.png" alt="Corazón" class="corazon corazon4">
+        <img src="./img/heart.png" alt="Corazón" class="corazon corazon5">
     </div>
 
     <script>
@@ -117,11 +117,11 @@
             const flores = document.getElementById("flores");
             const mensaje = document.getElementById("mensaje");
 
-            // Make the flowers visible
+            // Show the flowers
             flores.style.display = "block";
             setTimeout(() => {
-                flores.style.opacity = "1"; // Apply transition for smooth image display
-                flores.style.transform = "scale(1)"; // Gradually make it appear
+                flores.style.opacity = "1"; // Apply transition for smooth image appearance
+                flores.style.transform = "scale(1)"; // Gradually show the image
             }, 100);
 
             // Show the message
